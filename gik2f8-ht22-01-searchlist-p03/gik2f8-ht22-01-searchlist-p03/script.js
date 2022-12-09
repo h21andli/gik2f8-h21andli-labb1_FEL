@@ -42,7 +42,7 @@ function renderBookList(bookList) {
     async function renderBookDetails(e) {
     
     e.target.classList.remove('bg-white');
-    e.target.classList.add('bg-emerald-50');
+    e.target.classList.add('bg-emerald-100');
 
     const positionX = (e.clientX + 80) +'px';
     const positionY = e.clientY + 'px';
@@ -52,7 +52,7 @@ function renderBookList(bookList) {
     root.insertAdjacentHTML('beforeend', BookDetailBox(book, positionX, positionY));
 
     e.target.addEventListener('mouseout',(e) => {
-      e.target.classList.remove('bg-emerald-50');
+      e.target.classList.remove('bg-emerald-100');
       e.target.classList.add('bg-white');
       let existingElement = document.getElementById('bookDetail');
       existingElement && existingElement.remove();
